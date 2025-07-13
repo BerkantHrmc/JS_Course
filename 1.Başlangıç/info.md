@@ -42,3 +42,5 @@ Web geliştirmede, JavaScript dosyalarının `<body>` etiketinin kapanışından
 Modern HTML’de `<script>` etiketi için:
 ```html
 <script src="app.js" defer></script>
+
+Yani yeni bir sayfa oluşturup js kodlarımızı oraya yazmak bu sayede html sayfamızın şişmesini önleriz.
