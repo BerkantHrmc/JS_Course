@@ -3,6 +3,20 @@
 
 Atama operatörleri, bir değişkene değer atamak veya mevcut değeri üzerinde işlem yaparak güncellemek için kullanılır.
 
+// ----------- ATAMA OPERATORLERİ -----------
+
+
+=   : Değer atama operatörü
+==  : Eşitlik operatörü (veri tiplerinin önemi yoktur)
+=== : Eşitlik operatörü ( veri tipinin de önemi vardır)
++=  : Toplayarak atama (x += y → x = x + y)
+-=  : Çıkararak atama (x -= y → x = x - y)
+*=  : Çarparak atama (x *= y → x = x * y)
+/=  : Bölerken atama (x /= y → x = x / y)
+%=  : Mod alarak atama (x %= y → x = x % y)
+**= : Üs alarak atama (x **= y → x = x ** y)
+
+
 ---
 
 ## 📌 Temel Atama Operatörü
@@ -91,3 +105,19 @@ x **= 3; // x = x ** 3 → x = 8
 ## 🧠 Not
 
 Bu operatörler, kısaltma sağlar ve okunabilirliği artırır. Her biri, `x = x (operatör) y` ifadesinin kısaltılmış halidir.
+
+//-----------MANTIKSAL ATAMA OPERATORLERİ-----------
+
+// ||  : Mantıksal VEYA (logical OR)
+// &&  : Mantıksal VE (logical AND)
+// !   : Mantıksal DEĞİL (logical NOT)
+
+//-----------KARŞILAŞTIRMA OPERATORLERİ-----------
+
+// !=  : Eşit değil (not equal)
+// !== : Eşit değil (değer ve tip eşitliği)
+// >   : Büyüktür (greater than)
+// <   : Küçüktür (less than)
+// >=  : Büyük veya eşit (greater than or equal)
+// <=  : Küçük veya eşit (less than or equal)
+
