@@ -106,18 +106,90 @@ x **= 3; // x = x ** 3 → x = 8
 
 Bu operatörler, kısaltma sağlar ve okunabilirliği artırır. Her biri, `x = x (operatör) y` ifadesinin kısaltılmış halidir.
 
-//-----------MANTIKSAL ATAMA OPERATORLERİ-----------
 
-// ||  : Mantıksal VEYA (logical OR)
-// &&  : Mantıksal VE (logical AND)
-// !   : Mantıksal DEĞİL (logical NOT)
+# 🔀 Mantıksal Atama Operatörleri
 
-//-----------KARŞILAŞTIRMA OPERATORLERİ-----------
+### `||` – Mantıksal VEYA (OR)
+Soldan sağa ilk doğru (truthy) değeri döndürür.
 
-// !=  : Eşit değil (not equal)
-// !== : Eşit değil (değer ve tip eşitliği)
-// >   : Büyüktür (greater than)
-// <   : Küçüktür (less than)
-// >=  : Büyük veya eşit (greater than or equal)
-// <=  : Küçük veya eşit (less than or equal)
+```javascript
+let ad = "" || "Ziyaretçi";
+console.log(ad); // "Ziyaretçi"
+```
+
+---
+
+### `&&` – Mantıksal VE (AND)
+Soldan sağa ilk yanlış (falsy) değeri döndürür. Hepsi doğruysa sonuncuyu verir.
+
+```javascript
+let durum = true && "Giriş Başarılı";
+console.log(durum); // "Giriş Başarılı"
+```
+
+---
+
+### `!` – Mantıksal DEĞİL (NOT)
+Bir değerin mantıksal tersini alır.
+
+```javascript
+let aktif = false;
+console.log(!aktif); // true
+```
+
+---
+
+# 🔍 Karşılaştırma Operatörleri
+
+### `!=` – Eşit Değil
+Değerler eşit değilse `true` döner.
+
+```javascript
+console.log(5 != 3); // true
+```
+
+---
+
+### `!==` – Değer ve Tip Eşit Değil
+Değer veya tip farklıysa `true` döner.
+
+```javascript
+console.log(5 !== "5"); // true
+```
+
+---
+
+### `>` – Büyüktür
+Soldaki sağdakinden büyükse `true` döner.
+
+```javascript
+console.log(10 > 7); // true
+```
+
+---
+
+### `<` – Küçüktür
+Soldaki sağdakinden küçükse `true` döner.
+
+```javascript
+console.log(3 < 7); // true
+```
+
+---
+
+### `>=` – Büyük veya Eşit
+Soldaki sağdakine eşit veya büyükse `true` döner.
+
+```javascript
+console.log(5 >= 5); // true
+```
+
+---
+
+### `<=` – Küçük veya Eşit
+Soldaki sağdakine eşit veya küçükse `true` döner.
+
+```javascript
+console.log(4 <= 6); // true
+```
 
