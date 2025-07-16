@@ -6,15 +6,17 @@ Atama operatörleri, bir değişkene değer atamak veya mevcut değeri üzerinde
 // ----------- ATAMA OPERATORLERİ -----------
 
 
-=   : Değer atama operatörü
-==  : Eşitlik operatörü (veri tiplerinin önemi yoktur)
-=== : Eşitlik operatörü ( veri tipinin de önemi vardır)
-+=  : Toplayarak atama (x += y → x = x + y)
--=  : Çıkararak atama (x -= y → x = x - y)
-*=  : Çarparak atama (x *= y → x = x * y)
-/=  : Bölerken atama (x /= y → x = x / y)
-%=  : Mod alarak atama (x %= y → x = x % y)
-**= : Üs alarak atama (x **= y → x = x ** y)
+| Operatör | Açıklama                                                                 |
+|----------|--------------------------------------------------------------------------|
+| `=`      | Değer atama operatörü                                                    |
+| `==`     | Eşitlik operatörü (veri tipleri dikkate alınmaz)                         |
+| `===`    | Sıkı eşitlik operatörü (değer ve veri tipi kontrol edilir)               |
+| `+=`     | Toplayarak atama → `x += y` ≡ `x = x + y`                                 |
+| `-=`     | Çıkararak atama → `x -= y` ≡ `x = x - y`                                  |
+| `*=`     | Çarparak atama → `x *= y` ≡ `x = x * y`                                   |
+| `/=`     | Bölerek atama → `x /= y` ≡ `x = x / y`                                    |
+| `%=`     | Mod alarak atama → `x %= y` ≡ `x = x % y`                                 |
+| `**=`    | Üs alarak atama → `x **= y` ≡ `x = x ** y`                                |
 
 
 ---
@@ -106,6 +108,7 @@ x **= 3; // x = x ** 3 → x = 8
 
 Bu operatörler, kısaltma sağlar ve okunabilirliği artırır. Her biri, `x = x (operatör) y` ifadesinin kısaltılmış halidir.
 
+---
 
 # 🔀 Mantıksal Atama Operatörleri
 
