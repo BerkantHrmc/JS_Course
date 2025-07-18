@@ -351,16 +351,6 @@ console.log(numbers) // [5, 4, 3, 2, 1]
 
 ```
 
-### Dizinin en başına eleman eklemek
-
-
-
-```javascript
-
-
-
-```
-
 ### Dizi elemanlarını sıralamak
 **sort**: Dizi elemanlarını alfabetik sırada düzenleyin.Sort call back fonksyonu alır, sort'un call back fonksiyonu ile nasıl kullandığımızı ilerleyen bölümlerde göreceğiz.
 
@@ -397,15 +387,6 @@ const  fullStack = [frontEnd, backEnd] // [["HTML", "CSS", "JS", "React", "Redux
 ```
 
 
-### Dizinin en başına eleman eklemek
-
-
-
-```javascript
-
-
-
-```
 ---
 
 
