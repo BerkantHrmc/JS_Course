@@ -53,7 +53,7 @@ const  fruits = ['banana', 'orange', 'mango', 'lemon'] // string dizisi, meyvele
 
 ## Çeşitli Konular
 
-### Array Uzunluğu
+### Array uzunluğu
 
 ```javascript
 
@@ -62,7 +62,7 @@ console.log('Number of numbers:', numbers.length)
 
 ```
 
-### Dizinin farklı veri tiplerinde elemanları olabilir.
+### Dizinin farklı veri tiplerinde elemanları olabilir
 
 ```javascript
 
@@ -76,7 +76,7 @@ true, //boolean
 
 ```
 
-### Split kullanarak dizi oluşturmak. 
+### Split kullanarak dizi oluşturmak
 
 ```javascript
 
@@ -89,6 +89,69 @@ let  companiesString = 'Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon'
 const  companies = companiesString.split(',') //virgülden ayır
 
 // ["Facebook", " Google", " Microsoft", " Apple", " IBM", " Oracle", " Amazon"]
+
+```
+
+### Index kullanarak dizi elemanlarına ulaşmak
+
+Dizide elemanların indexlerini kullanarak o elemana ulaşabiliriz. Dizinin index'i 0'dan başlar.
+
+```javascript
+
+const  fruits = ['banana', 'orange', 'mango', 'lemon']
+let  firstFruit = fruits[0] //banana
+
+let  lastIndex = fruits.length - 1
+let lastFruit = fruits[lastIndex] //lemon
+
+```
+
+### Dizi elemanlarını düzenlemek
+
+```javascript
+
+const  numbers = [1, 2, 3, 4, 5]
+numbers[0] = 10  // index 0'daki 1 elemanını 10 elemanı olarak değiştirdik
+
+```
+
+## Dizileri Manüple Edecek Metotlar
+
+Diziyi manüple edebilmek için farklı metotlar vardır. Bunlar dizilerle uğraşmak için kullanışlı yöntemlerden bazılarıdır. Bu yöntemler: Array, length, concat, indexOf, slice, splice, join, toString, includes, lastIndexOf, isArray, fill, push, pop, shift, unshift
+
+
+
+### Dizi constructor
+
+Array: Bir dizi yaratmak için kullanılır.
+
+```javascript
+
+
+
+```
+
+### Split kullanarak dizi oluşturmak. 
+
+```javascript
+
+
+
+```
+
+### Split kullanarak dizi oluşturmak. 
+
+```javascript
+
+
+
+```
+
+### Split kullanarak dizi oluşturmak. 
+
+```javascript
+
+
 
 ```
 ---
