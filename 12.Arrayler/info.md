@@ -51,6 +51,8 @@ const  fruits = ['banana', 'orange', 'mango', 'lemon'] // string dizisi, meyvele
 ```
 ---
 
+
+
 ## Çeşitli Konular
 
 ### Array uzunluğu
@@ -115,6 +117,10 @@ numbers[0] = 10  // index 0'daki 1 elemanını 10 elemanı olarak değiştirdik
 
 ```
 
+---
+
+
+
 ## Dizileri Manüple Edecek Metotlar
 
 Diziyi manüple edebilmek için farklı metotlar vardır. Bunlar dizilerle uğraşmak için kullanışlı yöntemlerden bazılarıdır. Bu yöntemler: Array, length, concat, indexOf, slice, splice, join, toString, includes, lastIndexOf, isArray, fill, push, pop, shift, unshift
@@ -123,7 +129,231 @@ Diziyi manüple edebilmek için farklı metotlar vardır. Bunlar dizilerle uğra
 
 ### Dizi constructor
 
-Array: Bir dizi yaratmak için kullanılır.
+**Array**: Bir dizi yaratmak için kullanılır.
+
+```javascript
+
+const  arr = Array() // boş bir dizi yaratır
+const  eightEmptyValues = Array(8) // sekiz tane boş değer yaratır
+
+```
+
+### fill ile statik değerler yaratmak
+
+**fill**: Bütün dizi elemanlarını statik değerle doldurur.
+
+```javascript
+
+const  arr = Array() // Boş bir dizi yaratır
+const  eightXvalues = Array(8).fill('X') // 'X'değerine sahip 8 tane eleman oluşuturur.
+const  eight0values = Array(8).fill(0) // '0' değerine sahip 8 tane eleman oluşturur.
+
+```
+
+### Concat kullanarak dizileri birleştirmek
+
+**concat**: dizileri birbiri ile birleştirir.
+
+```javascript
+
+const  firstList = [1, 2, 3]
+const  secondList = [4, 5, 6]
+const  thirdList = firstList.concat(secondList)
+
+// [1, 2, 3, 4, 5, 6]
+
+```
+
+### Dizi uzunluğuna ulaşmak
+
+**Length**:Dizi uzunluğunu bildirir.
+
+```javascript
+
+const  numbers = [1, 2, 3, 4, 5]
+console.log(numbers.length) // -> Dizinin uzunluğu 5'tir
+
+```
+
+### Arr dizisinin içindeki indexe ulaşmak
+
+**indexOf**: O elemanın dizide olup olmadığını kontrol eder.Eğer o eleman dizide mevcutsa index numarasını, 
+mevcut değilse -1 döner.
+
+```javascript
+
+const  numbers = [1, 2, 3, 4, 5]
+
+console.log(numbers.indexOf(5)) // -> 4
+console.log(numbers.indexOf(0)) // -> -1
+console.log(numbers.indexOf(1)) // -> 0
+
+```
+
+### Dizinin içindeki son indexe ulaşmak
+
+**lastIndexOf**: Dizideki son elemanın pozisyonunu verir. Eğer mevcutsa o elemanın index numarasını döner, mevcut değilse -1 döner.Sondan taramaya başlar.
+
+```javascript
+
+const  numbers = [1, 2, 3, 4, 5, 3, 1, 2]
+console.log(numbers.lastIndexOf(2)) // 7
+
+
+```
+
+### Bir dizide bir öğenin olup olmadığını kontrol etmek
+
+**includes**:Bir dizide bir öğenin olup olmadığını kontrol etmek için kullanılır.Mevcut ise, true değerini döndürür, aksi takdirde false değerini döndürür.
+
+```javascript
+
+const  numbers = [1, 2, 3, 4, 5]
+console.log(numbers.includes(5)) // true
+
+```
+
+### Diziyi kontrol etmek
+
+**Array.isArray**: Veri tipinin bir dizi olup olmadığını kontrol etmek için kullanılır.
+
+```javascript
+
+const  numbers = [1, 2, 3, 4, 5]
+console.log(Array.isArray(numbers)) // true
+
+```
+
+### Diziyi stringe çevirmek
+
+**toString**:Diziyi string bir ifadeye çevirir.
+
+
+```javascript
+
+const  numbers = [1, 2, 3, 4, 5]
+console.log(numbers.toString()) // 1,2,3,4,5
+
+const  names = ['Asabeneh', 'Mathias', 'Elias', 'Brook']
+console.log(names.toString()) // Asabeneh,Mathias,Elias,Brook
+
+```
+
+### Dizi elemanlarını Joinlemek
+
+**join**: Dizinin elemanlarını birleştirmek için kullanılır, join yönteminde ilettiğimiz argüman dizide birleştirilir ve bir dizi olarak döndürülür. Varsayılan olarak bir virgül ile birleşir, ancak elemanlar arasında birleştirilebilecek farklı dizi parametreleri iletebiliriz.
+
+```javascript
+
+const  numbers = [1, 2, 3, 4, 5]
+console.log(numbers.join()) // 1,2,3,4,5
+
+const  names = ['Asabeneh', 'Mathias', 'Elias', 'Brook']
+console.log(names.join(' # ')) //Asabeneh # Mathias # Elias # Brook
+
+```
+
+### Dizi elemanlarını slice etmek
+
+**Slice**: Bir aralıktaki çoklu elemanları dilimler İki parametre alır. Bu parametreler, başlangıç ve bitiş konumlarıdır. Bitiş konumunu dahil etmez.
+
+.slice(başlangıç, bitiş)
+
+```javascript
+
+const  numbers = [1,2,3,4,5]
+
+console.log(numbers.slice()) // -> Bütün öğeyi kopyalar
+console.log(numbers.slice(0)) // -> Bütün öğeyi kopyalar
+console.log(numbers.slice(0, numbers.length)) // Bütün öğeyi kopyalar
+console.log(numbers.slice(1,4)) // -> [2,3,4] // son elemanı dahil etmez
+
+
+```
+
+### Dizilerde splice metodu
+
+**Splice**: üç parametre alır.
+.splice(kaldırılacakların başlagıç konumu , bitiş konumu , eklenecek sayılar)
+
+```javascript
+const  numbers = [1, 2, 3, 4, 5]
+numbers.splice() // -> Bütün elemanları kaldırır
+
+const  numbers = [1, 2, 3, 4, 5]
+numbers.splice(0,1)
+console.log(numbers) // ilk elemanı kaldırır
+
+const  numbers = [1, 2, 3, 4, 5, 6]
+numbers.splice(3, 3, 7, 8, 9)
+console.log(numbers.splice(3, 3, 7, 8, 9)) // -> [1, 2, 3, 7, 8, 9] //2 eleman kaldırdı ve yerine 3 eleman ekledi
+
+```
+
+### Push kullanarak diziye eleman eklemek
+
+**Push**: Dizinin sonuna eleman ekler.Varolan bir diziye eleman eklemek için push metodunu kullanırız.
+
+
+```javascript
+
+const  arr = ['item1', 'item2','item3']
+arr.push('new item') // ['item1', 'item2','item3','new item']
+
+
+```
+
+### pop kıllanarak diziden eleman çıkarmak
+
+**pop**: Dizinin sonundaki elemanı siler.
+
+```javascript
+
+const  numbers = [1, 2, 3, 4, 5]
+numbers.pop() // -> Sondaki elemanı siler
+console.log(numbers) // -> [1,2,3,4]
+
+```
+
+### Dizinin en başından eleman kaldırmak
+
+**shift**: Dizinin en başındaki elemanı siler.
+
+```javascript
+
+const  numbers = [1, 2, 3, 4, 5]
+numbers.shift() // -> baştan bir elemanı kaldırır.
+console.log(numbers) // -> [2,3,4,5]
+
+```
+
+### Dizinin en başına eleman eklemek
+
+**unshift**: Dizinin başına dizi elemanı ekler.
+
+```javascript
+
+const  numbers = [1, 2, 3, 4, 5]
+numbers.unshift(0) // -> en başa eleman ekler
+console.log(numbers) // -> [0,1,2,3,4,5]
+
+```
+
+### Dizi sırasını terse çevirmek
+
+**reverse**: Dizi sıralamasını terse çevirir.
+
+```javascript
+
+const  numbers = [1, 2, 3, 4, 5]
+numbers.reverse() // -> ters dizi sırası
+console.log(numbers) // [5, 4, 3, 2, 1]
+
+```
+
+### Dizinin en başına eleman eklemek
+
+
 
 ```javascript
 
@@ -131,23 +361,45 @@ Array: Bir dizi yaratmak için kullanılır.
 
 ```
 
-### Split kullanarak dizi oluşturmak. 
+### Dizi elemanlarını sıralamak
+**sort**: Dizi elemanlarını alfabetik sırada düzenleyin.Sort call back fonksyonu alır, sort'un call back fonksiyonu ile nasıl kullandığımızı ilerleyen bölümlerde göreceğiz.
+
 
 ```javascript
 
+const  webTechs = ['HTML','CSS','JavaScript','React','Redux','Node','MongoDB']
+webTechs.sort() // ["CSS", "HTML", "JavaScript", "MongoDB", "Node", "React", "Redux"]
+
+webTechs.reverse() // ["Redux", "React", "Node", "MongoDB", "JavaScript", "HTML", "CSS"]
 
 
 ```
 
-### Split kullanarak dizi oluşturmak. 
+### Dizi içinde diziler
+
+Diziler farklı veri tiplerinde elemanları ve yeni bir dizi de depolayabilirler.
+
 
 ```javascript
 
+const  firstNums = [1, 2, 3]
+const  secondNums = [1, 4, 9]
+const  arrayOfArray = [[1, 2, 3], [1, 2, 3]]
+
+console.log(arrayOfArray[0]) // [1, 2, 3]
+
+
+const  frontEnd = ['HTML', 'CSS', 'JS', 'React', 'Redux']
+const  backEnd = ['Node','Express', 'MongoDB']
+const  fullStack = [frontEnd, backEnd] // [["HTML", "CSS", "JS", "React", "Redux"], ["Node", "Express", "MongoDB"]]
 
 
 ```
 
-### Split kullanarak dizi oluşturmak. 
+
+### Dizinin en başına eleman eklemek
+
+
 
 ```javascript
 
@@ -156,58 +408,9 @@ Array: Bir dizi yaratmak için kullanılır.
 ```
 ---
 
-## ✅ `if - else if - else` Yapısı
-
-Birden fazla koşul kontrol edilir.
-Sadece biri çalışır.
-
-```javascript
-let notDegeri = 85;
-
-if (notDegeri >= 90) {
-  console.log("Pekiyi");
-} else if (notDegeri >= 70) {
-  console.log("İyi");
-} else if (notDegeri >= 50) {
-  console.log("Orta");
-} else {
-  console.log("Kaldı");
-}
-```
 
 ---
 
-## 🔄 `switch` Yapısı
 
-Birden fazla durumu kontrol etmek için kullanılır. `case` ifadeleri ile çalışır.
-
-```javascript
-let gun = "Pazartesi";
-
-switch (gun) {
-  case "Pazartesi":
-    console.log("Haftanın ilk günü.");
-    break;
-  case "Cuma":
-    console.log("Haftanın son iş günü.");
-    break;
-  default:
-    console.log("Hafta sonu veya geçersiz gün.");
-}
-```
-
----
-
-## 💡 Ternary (Üçlü) Operatör
-
-Kısa if-else ifadesidir.
-
-```javascript
-let yas = 20;
-let mesaj = (yas >= 18) ? "Reşit" : "Reşit değil";
-console.log(mesaj);
-```
-
----
 
 📌 **Not:** Koşul yapıları, uygulamanın akışını yönlendirmek için temel yapı taşlarındandır.
