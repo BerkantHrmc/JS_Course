@@ -4,10 +4,11 @@
 
 Değişkenlerin aksine, diziler Çoklu değerleri depolayabilirler. Dizi'deki her bir değer index'e sahiptir, 
 ve her index bellek adresindeki bir referans'ı işaret eder. Bu index'ler kullanılarak her bir değere ulaşım 
-sağlanabilir. Bir dizinin index'i sıfır'dan başlar ve ** dizinin son elemanının index'i, dizinin uzunluğundan 
-bir eksiktir.**
+sağlanabilir. Bir dizinin index'i sıfır'dan başlar ve dizinin son elemanının index'i, dizinin uzunluğundan 
+bir eksiktir.
 
 Bir dizi, tekrar edilen elemanların ve farklı veri türlerinin depolanmasına izin verir. Bir dizi boş olabilir veya farklı veri türü değerlerine sahip olabilir.
+
 ---
 
 ## Boş bir dizi nasıl oluşturulur
@@ -61,21 +62,33 @@ console.log('Number of numbers:', numbers.length)
 
 ```
 
-### Array Uzunluğu
+### Dizinin farklı veri tiplerinde elemanları olabilir.
 
 ```javascript
 
-console.log('Numbers:', numbers)
-console.log('Number of numbers:', numbers.length)
+const  arr = [
+'Asabeneh',  //string
+250, //number
+true, //boolean
+{ country:  'Finland', city:  'Helsinki' }, //Sınıf
+{ skills: ['HTML', 'CSS', 'JS', 'React', 'Python'] } //Array
+]
 
 ```
 
-### Array Uzunluğu
+### Split kullanarak dizi oluşturmak 
 
 ```javascript
 
-console.log('Numbers:', numbers)
-console.log('Number of numbers:', numbers.length)
+let  js = 'JavaScript'
+const  charsInJavaScript = js.split('') //harflerine ayır
+
+// ["J", "a", "v", "a", "S", "c", "r", "i", "p", "t"]
+
+let  companiesString = 'Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon'
+const  companies = companiesString.split(',') //virgülden ayır
+
+// ["Facebook", " Google", " Microsoft", " Apple", " IBM", " Oracle", " Amazon"]
 
 ```
 ---
