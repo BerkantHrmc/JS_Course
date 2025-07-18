@@ -51,7 +51,7 @@ const  fruits = ['banana', 'orange', 'mango', 'lemon'] // string dizisi, meyvele
 ```
 ---
 
-## Çeşitli Fonksiyonlar 
+## Çeşitli Konular
 
 ### Array Uzunluğu
 
@@ -76,7 +76,7 @@ true, //boolean
 
 ```
 
-### Split kullanarak dizi oluşturmak 
+### Split kullanarak dizi oluşturmak. 
 
 ```javascript
 
