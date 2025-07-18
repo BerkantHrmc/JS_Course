@@ -4,6 +4,9 @@ let value = prompt("Lütfen bütçenizi girin:");
 let numAge = Number(age);
 let numValue = Number(value);
 
+// let age = number(prompt("Lütfen yaşınızı girin:"));
+// let value = number(prompt("Lütfen bütçenizi girin:"));
+// şeklinde de yazılabilir.
 
 if (numAge >= 18 && numValue >= 500000) {
     alert("Tebrikler, araba alabilirsiniz!");

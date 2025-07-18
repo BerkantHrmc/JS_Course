@@ -6,7 +6,7 @@
 3- Boolean
 4- Null
 5- Undefined
-6- Object
+6- Object 
 7- Function
 */
 

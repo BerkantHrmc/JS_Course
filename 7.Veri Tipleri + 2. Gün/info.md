@@ -10,8 +10,8 @@ Veri Tipleri
 3- Boolean
 4- Null
 5- Undefined
-6- Object
-7- Function
+6- Object (referans)
+7- Function 
 
 ---
 
