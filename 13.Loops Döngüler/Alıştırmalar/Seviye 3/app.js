@@ -264,3 +264,9 @@ if (newArr.length>1) {
 console.log(mostWordCoun);
 
 
+//-----countries array i ters çevirin ve ülkelerin tüm harflerini büyük hale gertirin-------
+
+const revCountries = countries.reverse();
+let stringCoun = revCountries.toString();
+const biggcountr = stringCoun.toUpperCase().split(",");
+console.log(biggcountr);
