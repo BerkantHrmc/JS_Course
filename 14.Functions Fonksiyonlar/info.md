@@ -7,9 +7,9 @@ Bir fonksiyon, belirli bir görevi gerçekleştirmek üzere tasarlanmış ve yen
 
 Fonksiyon kullanmanın avantajları:
 
-- *temiz ve okunması kolay
-- *yeniden kullanılabilir
-- *kolay test edilir
+- *temiz ve okunması kolay*
+- *yeniden kullanılabilir*
+- *kolay test edilir*
 
 **Bir fonksiyon birkaç şekilde tanımlanabilir:**
 
@@ -19,57 +19,77 @@ Fonksiyon kullanmanın avantajları:
 - *Arrow function*
 
 
-
-
 ---
 
-## for Loop - for Döngüsü
+## Klasik Fonksiyon Tanımlama
    
 ```javascript
 
-// For Döngüsünün yapısı
-for(başlangıç_değeri, şart, arttırma/azaltma){ // uygulamak istediğimiz kod
+//parametresiz fonksiyon tanımı:
+
+function functionName() {
+
+  // istenilen kod parçası
+
 }
+
+functionName() // fonksiyon, fonksiyon adı ve parantezler ile çağırılır
 
 ```
 
+## Anonymous Function - İsimsiz Fonksiyon
+
 ```javascript
 
-for(let i = 0; i <= 5; i++){
-  console.log(`${i} * ${i} = ${i * i}`) 
+const anonymousFun = function() {
+  console.log(
+    'İsimsiz bir fonksiyonum ve değerim anonim olarak saklanıyor'
+  )
 }
 
 ```
+## Expression Function
+
+Expression function, isimsiz fonksiyonlardır. İsimsiz bir fonksiyon oluşturduktan sonra bir değişkene atayarak kullanırız. Fonksiyondan bir değer geri döndürmek için değişkeni çağırmalıyız. Örnek vemrek gerekirse.
 
 ```javascript
 
-const countries = ['Finland', 'Sweden', 'Denmark', 'Norway', 'Iceland']
-const newArr = []
-for(let i = 0; i < countries.length; i++){
-  newArr.push(countries[i].toUpperCase()) // ["FINLAND", "SWEDEN", "DENMARK", "NORWAY", "ICELAND"]
-
+// Function expression
+const square = function() {
+  console.log("Bu bir expression function türünde fonksiyondur")
 }
 
 ```
 ---
 
+### Parametresiz ve dönüş değeri olamayan fonksiyon
 
-
-
-## while loop - while Döngüsü
-while anahtar kelimesinin yanında belirtilen şarta doğru olduğu sürece çalışan bir döngü türüdür. Eğer koşul sürekli doğru çıkacak şekilde ayarlanırsa while döngüsü uygulama kasten kesilmediği sürece sonsuza kadar devam edebilir. Bu yüzden buraya dikkat etmek gerekebilir.
-
+Fonksiyon, parametre olmadan tanımlanabilir. (Şu ana kadar tanımladıklarımız zaten parametresizdi)
 
 ```javascript
 
-let i = 0
-while (i <= 5) {
-  console.log(i)
-  i++
-}                   // 0 1 2 3 4 5
+function square() {
+  let num = 2
+  let square = num * num
+  console.log(square)
+}
+
+square() // 4
+
+// parametresiz fonksiyon örnek 2:
+function addTwoNumbers() {
+  let numOne = 10
+  let numTwo = 20
+  let sum = numOne + numTwo
+
+  console.log(sum)
+}
+
+addTwoNumbers() // fonksiyon, kendisine verilen isim ile çağırılmalı
 
 ```
-
+### Bir değer döndüren fonksiyon
+Fonksiyonlar geriye bir değer döndürebilir. bu işlemi return anahtar kelimesini kullanarak sağlarız. Normal fonksiyondan farklı olarak bir field'a atanabilir veya bir metot içerisinde parametre olarak kullanılabilir.
 
 ```javascript
 
@@ -83,20 +103,35 @@ true, //boolean
 
 ```
 
-## do while loop do while döngüsü
-do while döngüsü Koşul ile belirtilen alanın doğru olup olmadığına bakmadan kod bloğunu bir kez çalıştırır ve daha sonra Koşul ile belirtilen alan doğru (true) olduğu sürece kod bloğunun çalışması için kullanılır.
+### Parametreli fonksiyon
+
+Bir fonksiyonda farklı veri türlerini (number, string, boolean, object, function) parametre olarak geçebiliriz.
 
 ```javascript
 
-let i = 0
-do {
-  console.log(i)
-  i++
-} while (i <= 5) // 0 1 2 3 4 5
+// bir parametreli fonksiyon
+function functionName(parm1) {  
+    
+    // istenilen kod parçası
+
+}
+
+functionName(parm1) // fonksiyonu çağırma sırasında parantezler arasına bir parametreye ihtiyaç duyar
 
 ```
 
-## for of loop - for of döngüsü
+```javascript
+
+function areaOfCircle(r) {
+  let area = Math.PI * r * r
+  return area
+}
+
+console.log(areaOfCircle(10)) // bağımsız bir değişkenle çağırılmalı
+
+```
+
+### İki parametreli fonksiyon
 
 ES6, geleneksel bir döngüden daha basit olan bir döngü olan yeni bir döngü yöntemi sunar ve her tür için ve giriş döngülerinin eksikliklerini telafi eder.
 
@@ -114,45 +149,71 @@ for (const element of arr) {
 
 ```javascript
 
-const numbers = [1, 2, 3, 4, 5]
-
-for (const num of numbers) {
-  console.log(num)
-}                           // 1 2 3 4 5
-
-// array içindeki tüm nsayıları toplama
-let sum = 0
-for (const num of numbers) {
-  sum = sum + num   // daha pratik kullanım için, sum += num bundan sonra pratik olan bu syntax türünün kullanacağız.(+=, -=, *=, /= etc)
+// Parametresiz fonksiyon giriş yapmaz, bu nedenle parametrelerle bir fonksiyon yapalım
+function sumTwoNumbers(numOne, numTwo) {
+  let sum = numOne + numTwo
+  console.log(sum)
 }
+
+sumTwoNumbers(10, 20) // fonksiyon çağırımı
+// Bir fonksiyon değer döndürmezse veri depolayamaz, bu nedenle değer döndürmelidir. 
 ```
 
-## break
-Break, bir döngüyü kesmek için kullanılır.
+Eğer bir fonksiyon herhangi bir değer döndürmüyorsa (örneğin void tipindeyse ya da return ifadesi yoksa), bu fonksiyonun dış dünyaya veri iletmesi mümkün değildir. Yani o fonksiyonun içinde bir hesaplama yapılırsa, bu hesaplamanın sonucu başka yerlerde kullanılamaz.
+
+Eğer bir fonksiyonun amacı bir veri üretmek, hesaplamak veya bir sonucu dış dünyaya iletmekse, mutlaka return ile değer döndürmelidir. Aksi takdirde yaptığı işlemin dışarıya bir katkısı olmaz.
+
+### Çok parametreli fonksiyon
 
 
 ```javascript
 
-for(let i = 0; i <= 5; i++){
-  if(i == 3){
-    break;
-  }
-  console.log(i)
-}                   // 0 1 2
+// çok parametreli fonksiyon
+function functionName(parm1, parm2, parm3,...){
+  //istenilen kod parçası
+}
+functionName(parm1,parm2,parm3,...) // fonksiyon çağırımı sırasında birden çok parametreye ihtiyaç duyar                  
 
 ```
 
 
-## continue
-Belirli bir döngü aşamasını atlamak için continue anahtar kelimesi kullanılır.
+### Sınırsız sayıda parametreyle çalışan fonksiyon
+Fonksiyonlarla çalışırken kaç tane parametre gerekebileceğini bilemeyebiliriz. Javascript'te bu durumda bize sınırsız sayıda parametre alan fonksiyon yazabilme imkanı tanır. Bu şekilde bir fonksiyon tanımlamanın iki yolu vardır:
+
+1. Klasik fonksiyonda sınırsız sayıda parametre : 
+   Bu fonksiyonun tanımlanmasını fonksiyon scope'nda object temelli arguments anahtar kelimesi ile erişilir. Parametre olarak atanan her öğeye arguments üzerinden ulaşabiliriz. Bir örneğine bakmak gerekirse;
 
 ```javascript
 
-for(let i = 0; i <= 5; i++){
-  if(i == 3){
-    continue
-  }
-  console.log(i)
-}                   // 0 1 2 4 5
+// arguments nesnesine erişelim
+​
+function sumAllNums() {
+ console.log(arguments).  //arguman girilirse yaz
+}
 
+sumAllNums(1, 2, 3, 4)
+
+// Arguments(4) [1, 2, 3, 4, callee: ƒ, Symbol(Symbol.iterator): ƒ]
+
+```
+
+2.Kendi kendine çağırılan fonksiyon
+JavaScript sözdiziminde birçok ilginç şey vardır, bunlardan biri kendi kendine çalışan (kendi kendini çağıran) fonksiyonların tanımıdır. Böyle bir fonksiyonu şu şekilde tanımlayabiliriz:
+
+```javascript
+
+( function () {
+  // Bu blok hemen çalışır
+  console.log("Ben kendi kendimi çağıran bir fonksiyonum!");
+}) ();
+
+(function(name) {
+  console.log("Merhaba, " + name + "!");
+})("Berkant");
+
+let squaredNum = (function(n) {
+  return n * n
+})(10)
+
+console.log(squaredNum);
 ```
