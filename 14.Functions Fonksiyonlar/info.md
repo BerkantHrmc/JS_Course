@@ -217,3 +217,123 @@ let squaredNum = (function(n) {
 
 console.log(squaredNum);
 ```
+
+
+## Arrow Function
+
+Klasik fonksiyona alternatif olarak kullanılan arrow function sözdiziminde ufak bir farklılık vardır. function anahtar kelimesi yerine => işareti kullanılır.
+
+Sırasıyla aynı fonksiyonun klasik ve arrow function halini yazalım
+
+```javascript
+
+function square(n) {
+  return n * n
+}
+
+console.log(square(2)) // 4
+
+
+const square = n => {
+  return n * n
+}
+
+console.log(square(2))  // -> 4
+
+// kod bloğumuzda sadece bir satır kod varsa bu fonksiyon şu şekilde yazılabilir.
+const square = n => n * n  // -> 4
+
+
+```
+
+```javascript
+
+const printFullName = (firstName, lastName) => {
+  return `${firstName} ${lastName}`
+}
+
+console.log(printFullName('Asabeneh', 'Yetayeh'))
+
+
+```
+
+
+### Arrow function'da sınırsız sayıda parametre
+
+Arrow function, klasik fonksiyon gibi arguments nesnesine sahip değildir. Arrow function'da sınırsız sayıda parametre kullanmak istersek spread operatör (...) ve hemen ardından parametre adı kullanılır. Fonksiyonda bağımsız değişken olarak geçtiğimiz her şeye arrow functionda dizi olarak erişilebilir. Bir örnek görelim
+
+```javascript
+
+// arguments nesnesine erişmemize bir örnek
+​
+const sumAllNums = (...args) => {
+ // console.log(arguments), arguments nesnesi bulunamadı
+ // bunun yerine spread operator (...) ve parametre adı kullanalım
+ console.log(args)
+}
+
+sumAllNums(1, 2, 3, 4)
+// [1, 2, 3, 4]
+
+
+// function declaration
+​
+const sumAllNums = (...args) => {
+  let sum = 0
+  for (const element of args) {
+    sum += element
+  }
+  return sum
+}
+
+console.log(sumAllNums(1, 2, 3, 4)) // 10
+console.log(sumAllNums(10, 20, 13, 40, 10))  // 93
+console.log(sumAllNums(15, 20, 30, 25, 10, 33, 40))  // 173
+
+```
+
+### Default parametre ile fonksiyon kullanımı
+
+Bazen parametrelere default değerler geçmek isteyebiliriz. Bu durumda fonksiyon çağırımı sırasında söz konusu parametreyi vermek zorunda olmadan kullanabiliriz. Eğer bu parametreyi vermezsek fonksiyon işlevinin parametrenin default değerini kullanarak tamamlayacaktır.
+
+```javascript
+
+// syntax - söz dizimi
+// fonksiyon tanımı
+function functionName(param = value) {
+  //codes
+}
+
+// fonksiyon çağırımı
+functionName()
+functionName(arg)
+
+//-------------------------
+
+function greetings(name = 'Peter') {
+  let message = `${name}, welcome to 30 Days Of JavaScript!`
+  return message
+}
+
+console.log(greetings())
+console.log(greetings('Asabeneh'))
+
+//-------------------------
+
+function calculateAge(birthYear, currentYear = 2019) {
+  let age = currentYear - birthYear
+  return age
+}
+
+console.log('Age: ', calculateAge(1819))
+
+//-------------------------
+
+const greetings = (name = 'Peter') => {
+  let message = name + ', welcome to 30 Days Of JavaScript!'
+  return message
+}
+
+console.log(greetings())
+console.log(greetings('Asabeneh'))
+```
