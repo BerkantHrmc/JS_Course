@@ -93,14 +93,14 @@ Fonksiyonlar geriye bir değer döndürebilir. bu işlemi return anahtar kelimes
 
 ```javascript
 
-const  arr = [
-'Asabeneh',  //string
-250, //number
-true, //boolean
-{ country:  'Finland', city:  'Helsinki' }, //Sınıf
-{ skills: ['HTML', 'CSS', 'JS', 'React', 'Python'] } //Array
-]
-
+function printFullName (){
+      let firstName = 'Asabeneh'
+      let lastName = 'Yetayeh'
+      let space = ' '
+      let fullName = firstName + space + lastName
+      return fullName
+}
+console.log(printFullName())
 ```
 
 ### Parametreli fonksiyon
