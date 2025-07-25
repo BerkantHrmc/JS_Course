@@ -188,7 +188,7 @@ Fonksiyonlarla çalışırken kaç tane parametre gerekebileceğini bilemeyebili
 // arguments nesnesine erişelim
 ​
 function sumAllNums() {
- console.log(arguments).  //arguman girilirse yaz
+ console.log(arguments);  //arguman girilirse yaz
 }
 
 sumAllNums(1, 2, 3, 4)
