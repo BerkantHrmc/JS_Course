@@ -79,11 +79,3 @@ Kullanıcı varsa, kullanıcıya zaten bir hesabı olduğunu bildirin.
 b. Kullanıcının uygulamaya giriş yapmasına olanak tanıyan signIn adlı bir fonksiyon oluşturun.
 */
 
-function signUp ( kullanıcıAdi , email , sifre) {
-
-        if (kullanıcıAdi === users.username) {
-            console.log("Bu kullanıcıya ait hesap var")
-        }
-        console.log("kullanıcı başarıyla eklendi")
-}
-signUp("Alex", "ggeagae", "gdaehae");
