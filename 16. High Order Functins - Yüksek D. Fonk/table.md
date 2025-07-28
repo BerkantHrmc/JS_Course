@@ -26,5 +26,27 @@ JavaScript'te zamanı kontrol etmek için iki temel fonksiyon kullanılır:
 - Her iki fonksiyon da **callback** fonksiyon alır.
 
 
+# Functional Programming - Fonksiyonel Programlama
+
+JavaScript'te fonksiyonel programlama yaklaşımı ile diziler üzerinde işlemler yapabiliriz. Bu işlemler çoğunlukla callback fonksiyonlarla birlikte çalışır.
+
+| Metot         | Açıklama |
+|---------------|---------|
+| **forEach**   | Dizideki her eleman üzerinde sırayla işlem yapar. Geriye değer döndürmez. |
+| **map**       | Her elemanı dönüştürür, yeni bir dizi döndürür. Orijinal diziyi değiştirmez. |
+| **filter**    | Belirli koşulları sağlayan elemanlardan yeni bir dizi oluşturur. |
+| **reduce**    | Dizi elemanlarını birleştirerek tek bir değere indirger. |
+| **every**     | Tüm elemanlar belirli bir koşulu sağlıyorsa `true` döner. |
+| **some**      | En az bir eleman belirli bir koşulu sağlıyorsa `true` döner. |
+| **find**      | Koşulu sağlayan ilk elemanı döner. |
+| **findIndex** | Koşulu sağlayan ilk elemanın indeksini döner. |
+| **sort**      | Elemanları alfabetik ya da sayısal olarak sıralar. Orijinal diziyi değiştirir. |
+
+## Ekstra Bilgiler:
+
+- `map`, `filter`, `reduce` gibi metotlar **orijinal diziyi değiştirmez**, yeni diziler döner.
+- `forEach` ve `sort` **orijinal diziyi değiştirir**.
+- `every`, `some`, `find`, `findIndex` gibi metotlar **boolean** ya da tek bir değer döndürür.
+
 
 
