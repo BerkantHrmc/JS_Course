@@ -9,6 +9,22 @@
 | **Callback ile foreach Kullanımı** | `forEach` metodu, her eleman için callback fonksiyon çalıştırır. <br> ```javascript<br>const numbers = [1, 2, 3, 4, 5];<br>function sumArray(arr) {<br> let sum = 0;<br> function callback(el) { sum += el; }<br> arr.forEach(callback);<br> return sum;<br>}<br>console.log(sumArray(numbers)); // 15<br>``` |
 | **forEach** | Bir dizideki **her eleman** için belirli bir işlemi (callback) gerçekleştirmeye yarar. |
 
+# Setting Time (Zaman Ayarlama Fonksiyonları)
+
+JavaScript'te zamanı kontrol etmek için iki temel fonksiyon kullanılır:
+
+| Fonksiyon | Açıklama | Kullanımı |
+|----------|----------|-----------|
+| **setInterval** | Belirli aralıklarla bir fonksiyonu sürekli çalıştırır. | ```javascript<br>function sayHello() {<br>  console.log('Hello');<br>}<br>setInterval(sayHello, 1000); // Her 1 saniyede bir "Hello" yazdırır<br>``` |
+| **setTimeout** | Belirli bir süre sonra bir defaya mahsus olarak fonksiyonu çalıştırır. | ```javascript<br>function sayHello() {<br>  console.log('Hello');<br>}<br>setTimeout(sayHello, 2000); // 2 saniye sonra bir kez "Hello" yazdırır<br>``` |
+
+## Ek Bilgi
+
+- **Süre değeri** milisaniye (ms) cinsindendir.  
+  - `1000 ms = 1 saniye`
+- **setInterval** sürekli tekrar ederken, **setTimeout** sadece **bir kere** çalışır.
+- Her iki fonksiyon da **callback** fonksiyon alır.
+
 
 
 
