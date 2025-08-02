@@ -241,19 +241,3 @@ for (const country of countriesMap) {
 }
 
 ```
-```javascript
-
-
-```
-```javascript
-
-
-```
-```javascript
-
-
-```
-```javascript
-
-
-```
