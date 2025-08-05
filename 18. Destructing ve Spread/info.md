@@ -249,29 +249,3 @@ sumAllNums(1, 2, 3, 4, 5)
 
 
 ```
-
-```javascript
-
-
-```
-
-```javascript
-
-
-```
-
-```javascript
-
-
-```
-
-```javascript
-
-
-```
-
-```javascript
-
-
-```
-
