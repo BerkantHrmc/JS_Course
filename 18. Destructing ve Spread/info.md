@@ -180,7 +180,98 @@ for (const {task, time, completed} of todoList){
 
 Bir diziye destructuring işlemi uygulandığında, kalan elemanları dizi olarak almak için yayılma operatörünü (...) kullanırız.Buna ek olarak, dizi öğelerini başka bir diziye yaymak için spread operatörünü kullanırız.
 
+
+## Dizi ogelerinin geri kalanını almak için spread operatörü
+
+```javascript
+
+const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+let [num1, num2, num3, ...rest] = nums
+​
+console.log(num1, num2, num3) // 1 2 3
+console.log(rest) // [4, 5, 6, 7, 8, 9, 10]
+
+
+```
+
+## Diziyi kopyalamak için spread operatörü
+
+```javascript
+
+const evens = [0, 2, 4, 6, 8, 10]
+const evenNumbers = [...evens]
+
+const odds = [1, 3, 5, 7, 9]
+const oddNumbers = [...odds]
+
+const wholeNumbers = [...evens, ...odds]
+
+console.log(evenNumbers)
+console.log(oddNumbers)
+console.log(wholeNumbers)
+
+/*
+[0, 2, 4, 6, 8, 10]
+[1, 3, 5, 7, 9]
+[0, 2, 4, 6, 8, 10, 1, 3, 5, 7, 9]
+*/
+```
+
+## Nesneyi kopyalamak için spread operatörü
+
+```javascript
+
+const user = {
+  name:'Asabeneh',
+  title:'Programmer',
+  country:'Finland',
+  city:'Helsinki'
+}
+
+const copiedUser = {...user}
+console.log(copiedUser) //{name: "Asabeneh", title: "Programmer", country: "Finland", city: "Helsinki"}
+
+```
+## Ok fonksiyonu ve spread operatörü
+Sınırsız sayıda argüman alan bir ok fonksiyonu yazmak istersek, bir yayılma spread kullanırız. Parametre olarak bir spread işleci kullanırsak, bir işlevi çağırdığımızda iletilen bağımsız değişken bir diziye dönüşecektir.
+
+```javascript
+
+
+const sumAllNums = (...args) => {
+  console.log(args)
+}
+
+sumAllNums(1, 2, 3, 4, 5)
+
+// [1, 2, 3, 4, 5]
+
+
+
+```
+
 ```javascript
 
 
 ```
+
+```javascript
+
+
+```
+
+```javascript
+
+
+```
+
+```javascript
+
+
+```
+
+```javascript
+
+
+```
+
