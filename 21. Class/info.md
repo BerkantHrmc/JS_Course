@@ -1,4 +1,3 @@
-# Class
 
 **this:** this, bulunduğu bağlamdaki (context) nesneyi temsil eder. Bir sınıf (class) içindeki this, o sınıftan oluşturulan nesneyi (instance) işaret eder.
 
