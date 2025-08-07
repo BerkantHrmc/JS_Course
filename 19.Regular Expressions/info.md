@@ -142,13 +142,3 @@ const regex = /^[a-zA-ZçÇğĞıİöÖşŞüÜ\s]+$/;
 
 ---
 
-## ✅ Özet
-
-- RegExp tanımı ve oluşturma
-- Karakter sınıfları ve özel karakterler
-- Tekrar belirteçleri
-- test, match, replace, search, split gibi metotlar
-- Bayraklar (flags)
-- Gelişmiş örnekler: E-posta, isim, sayı vb.
-
-Kaynak: [30 Days of JavaScript - Day 12](https://github.com/Asabeneh/30-Days-Of-JavaScript/blob/master/12_Day_Regular_expressions/12_day_regular_expressions.md)
